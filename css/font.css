@@ -1,1 +1,14 @@
+/* Import Lobster and Cabin from the Google Font API */
 @import url('//fonts.googleapis.com/css?family=Lobster|Cabin:400,700');
+
+/* Entypo (Dingbat) Font */
+@font-face {
+    font-family: 'EntypoRegular';
+    src: url('/font/Entypo-webfont.eot');
+    src: url('/font/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Entypo-webfont.woff') format('woff'),
+         url('/font/Entypo-webfont.ttf') format('truetype'),
+         url('/font/Entypo-webfont.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
