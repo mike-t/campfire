@@ -1,10 +1,13 @@
-/*
-Dont display the error box till needed
-*/
-#validation-error-box {
-	display: none;
-}
-
+/* ===================================================
+ * Campfire Main CSS
+ * ===================================================
+ * 
+ * @author:		Mike Walton
+ * @updated:	25/04/2013
+ * @desc:		used for formatting the Campfire HTML
+ * 				document.
+ * 
+ * =================================================== */
 .footer {
 	background-color: #5a5a5a;
 }

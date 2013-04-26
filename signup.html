@@ -78,16 +78,14 @@
 						<form action="submit" class="form-horizontal">
 							
 							<!-- Validation error messages go here -->
-							<div class="alert error" id="validation-error-box">
-								<button type="button" class="close" data-dismiss="alert">&times;</button>
-								<span id="validation-error-message">hello!</span>
+							<div id="validation-error-container">
 							</div>
 							
 							<!-- First Name -->
 							<div class="control-group">
 								<label class="control-label" for="firstname">First Name</label>
 								<div class="controls">
-									<input type="text" id="firstname" class="input-medium" placeholder="First Name" onkeyup="fieldIsValid(name, firstname);">
+									<input type="text" id="firstname" class="input-medium" placeholder="First Name" onchange="fieldIsValid(this, 'name');">
 								</div>
 							</div>
 							
@@ -95,7 +93,7 @@
 							<div class="control-group">
 								<label class="control-label" for="lastname">Last Name</label>
 								<div class="controls">
-									<input type="text" id="lastname" class="input-medium" placeholder="Last Name">
+									<input type="text" id="lastname" class="input-medium" placeholder="Last Name" onchange="fieldIsValid(this, 'name');">
 								</div>
 							</div>			
 
@@ -103,7 +101,7 @@
 							<div class="control-group">
 								<label class="control-label" for="email">Email</label>
 								<div class="controls">
-									<input type="email" id="email" class="input-large" placeholder="your@email.com">
+									<input type="email" id="email" class="input-large" placeholder="your@email.com" onchange="fieldIsValid(this, 'email');">
 								</div>
 							</div>
 							
@@ -111,7 +109,7 @@
 							<div class="control-group">
 								<label class="control-label" for="password">Password</label>
 								<div class="controls">
-									<input type="password" id="password" class="input-medium" placeholder="Password">
+									<input type="password" id="password" name="password" class="input-medium" placeholder="Password" onchange="fieldIsValid(this, 'password');">
 								</div>
 							</div>
 							
@@ -119,7 +117,23 @@
 							<div class="control-group">
 								<label class="control-label" for="password-confirm">Confirm Password</label>
 								<div class="controls">
-									<input type="password" id="password-confirm" class="input-medium" placeholder="Confirm Password">
+									<input type="password" id="password-confirm" name="password-confirm" class="input-medium" placeholder="Confirm Password" onchange="fieldIsValid(this, 'passswordmatch');">
+								</div>
+							</div>
+
+							<!-- date of birth -->
+							<div class="control-group">
+								<label class="control-label" for="dob">Date of Birth</label>
+								<div class="controls">
+									<input type="date" id="dob" name="dob" class="input-medium">
+								</div>
+							</div>
+							
+							<!-- date of birth -->
+							<div class="control-group">
+								<label class="control-label" for="dob">Telephone</label>
+								<div class="controls">
+									<input type="tel" id="telephone" name="telephone" class="input-medium">
 								</div>
 							</div>
 
