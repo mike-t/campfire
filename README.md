@@ -3,10 +3,9 @@ TODO
 Round 1:
 * tidy css, rename classes, removed what not used (is very large)
 * typography
-* several background images with timer and nav
-* add access keys and tab order to forms
-* javascript validation of form fields on key up
-* users ip in jaascript hidden field
+* add more background images carousel style
+* users ip in javascript hidden field
+* bug - closing all alerts pre-submission only shows first error...
 * disable on submit
 
 Round 2:

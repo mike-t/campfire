@@ -7,6 +7,7 @@
 		<meta name="description" content="Campfire is a place to share the outdoors with like minded people. Share campsites, swap stories and chat around the campfire. Free to Join!">
 		<meta name="author" content="Michael Walton">
 
+		<!-- provide html5 element support for old IE browsers -->
 		<!--[if lt IE 9]>
 			script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -38,21 +39,21 @@
 								<li class="dropdown" id="preview-menu">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Bushwalking <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a target="_blank" href="bootstrap.min.css">Search Bushwalks</a></li>
-										<li><a target="_blank" href="bootstrap.css">Highest Rated Bushwalks</a></li>
+										<li><a target="_blank" href="#">Search Bushwalks</a></li>
+										<li><a target="_blank" href="#">Highest Rated Bushwalks</a></li>
 										<li class="divider"></li>
-										<li><a target="_blank" href="variables.less">Bushwalking 101 - A Beginner's Guide</a></li>
-										<li><a target="_blank" href="bootswatch.less">Bushwalking Tips & Videos</a></li>
+										<li><a target="_blank" href="#">Bushwalking 101 - A Beginner's Guide</a></li>
+										<li><a target="_blank" href="#">Bushwalking Tips & Videos</a></li>
 									</ul>
 								</li>								
 								<li class="dropdown" id="preview-menu">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Camping <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a target="_blank" href="bootstrap.min.css">Search Campsites</a></li>
-										<li><a target="_blank" href="bootstrap.css">Highest Rated Campsites</a></li>
+										<li><a target="_blank" href="#">Search Campsites</a></li>
+										<li><a target="_blank" href="#">Highest Rated Campsites</a></li>
 										<li class="divider"></li>
-										<li><a target="_blank" href="variables.less">Camping 101 - A Beginner's Guide</a></li>
-										<li><a target="_blank" href="bootswatch.less">Camping Tips & Videos</a></li>
+										<li><a target="_blank" href="#">Camping 101 - A Beginner's Guide</a></li>
+										<li><a target="_blank" href="#">Camping Tips & Videos</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -75,7 +76,7 @@
 						<h2><span class="ding">&amp;</span>Join Campfire</h2>
 						<p class="lead">Pop in your details below to join Campfire</p>
 
-						<form action="submit" class="form-horizontal">
+						<form name="signup-form" id="signup-form" action="successful-form-validation" class="form-horizontal" method="get" onsubmit="return validateForm();" >
 							
 							<!-- Validation error messages go here -->
 							<div id="validation-error-container">
@@ -83,41 +84,41 @@
 							
 							<!-- First Name -->
 							<div class="control-group">
-								<label class="control-label" for="firstname">First Name</label>
+								<label class="control-label" for="firstname">First Name*</label>
 								<div class="controls">
-									<input type="text" id="firstname" class="input-medium" placeholder="First Name" onchange="fieldIsValid(this, 'name');">
+									<input required type="text" id="firstname" name="firstname" class="input-medium" placeholder="First Name" onchange="fieldIsValid(this, 'name');">
 								</div>
 							</div>
 							
 							<!-- Last Name -->
 							<div class="control-group">
-								<label class="control-label" for="lastname">Last Name</label>
+								<label class="control-label" for="lastname">Last Name*</label>
 								<div class="controls">
-									<input type="text" id="lastname" class="input-medium" placeholder="Last Name" onchange="fieldIsValid(this, 'name');">
+									<input required type="text" id="lastname" name="lastname" class="input-medium" placeholder="Last Name" onchange="fieldIsValid(this, 'name');">
 								</div>
 							</div>			
 
 							<!-- Email address -->
 							<div class="control-group">
-								<label class="control-label" for="email">Email</label>
+								<label class="control-label" for="email">Email*</label>
 								<div class="controls">
-									<input type="email" id="email" class="input-large" placeholder="your@email.com" onchange="fieldIsValid(this, 'email');">
+									<input required type="email" id="email" name="email" class="input-large" placeholder="your@email.com" onchange="fieldIsValid(this, 'email');">
 								</div>
 							</div>
 							
 							<!-- password field -->
 							<div class="control-group">
-								<label class="control-label" for="password">Password</label>
+								<label class="control-label" for="password">Password*</label>
 								<div class="controls">
-									<input type="password" id="password" name="password" class="input-medium" placeholder="Password" onchange="fieldIsValid(this, 'password');">
+									<input required type="password" id="password" name="password" class="input-medium" placeholder="Password" onchange="fieldIsValid(this, 'password');">
 								</div>
 							</div>
 							
 							<!-- confirm pasword field -->
 							<div class="control-group">
-								<label class="control-label" for="password-confirm">Confirm Password</label>
+								<label class="control-label" for="password-confirm">Confirm Password*</label>
 								<div class="controls">
-									<input type="password" id="password-confirm" name="password-confirm" class="input-medium" placeholder="Confirm Password" onchange="fieldIsValid(this, 'passswordmatch');">
+									<input required type="password" id="password-confirm" name="password-confirm" class="input-medium" placeholder="Confirm Password" onchange="fieldIsValid(this, 'passwordmatch', 'password');">
 								</div>
 							</div>
 
@@ -125,31 +126,35 @@
 							<div class="control-group">
 								<label class="control-label" for="dob">Date of Birth</label>
 								<div class="controls">
-									<input type="date" id="dob" name="dob" class="input-medium">
+									<input type="date" id="dob" name="dob" class="input-medium" onchange="fieldIsValid(this, 'date');">
 								</div>
 							</div>
 							
-							<!-- date of birth -->
+							<!-- telephone -->
 							<div class="control-group">
 								<label class="control-label" for="dob">Telephone</label>
 								<div class="controls">
-									<input type="tel" id="telephone" name="telephone" class="input-medium">
+									<input type="tel" id="telephone" name="telephone" class="input-medium" onchange="fieldIsValid(this, 'telephone');">
 								</div>
 							</div>
 
 							<!-- profile picture -->
 							<div class="control-group">
-								<label class="control-label" for="favourite">Profile Pic</label>
+								<label class="control-label" for="favourite">Profile Picture</label>
 								<div class="controls">
-									<input type="file" id="password" name="password">
+									<input type="file" id="avatar" name="avatar">
 								</div>
 							</div>
 							
 							<!-- favourite field -->
 							<div class="control-group">
-								<label class="control-label" for="favourite">Favourite Activity</label>
+								<label class="control-label" for="activity">Favourite Activity</label>
 								<div class="controls">
-									<input type="text" id="password" name="password" class="input-medium" placeholder="Password">
+									<select id="activity" name="activity" class="input-medium">
+										  <option value="" disabled selected>Select an Activity</option>
+										 <option value="bushwalking">Bushwalking</option>
+										 <option value="camping">Camping</option>										
+									</select>
 								</div>
 							</div>							
 							
@@ -157,10 +162,11 @@
 							<div class="control-group">
 								<div class="controls">
 									<label class="checkbox">								
-										<input type="checkbox" name="terms">&nbsp; I agree with the <a href="#">Terms and Conditions</a>.
+										<input required type="checkbox" id="terms" name="terms">&nbsp; I agree with the <a href="#">Terms and Conditions*</a>.
 									</label>
+									<p><small>* required field</small></p>
 								</div>
-							</div>
+							</div>		
 
 							<!-- Submit button -->
 							<div class="control-group">
@@ -169,9 +175,6 @@
 								</div>
 							</div>
 							
-							<!-- users IP to be recorded in hidden field -->							
-							<input type="hidden" id="ip-address" value="127.0.0.1">	
-
 						</form>
 						
 					</div>
