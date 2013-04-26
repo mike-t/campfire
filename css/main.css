@@ -5,19 +5,23 @@
  * @author:		Mike Walton
  * @updated:	25/04/2013
  * @desc:		used for formatting the Campfire HTML
- * 				document.
+ * 				document. Built on top of bootstrap.
  * 
  * =================================================== */
-.footer {
-	background-color: #5a5a5a;
+
+/* minimum body height 100% of screen */
+html, body {
+	height: 100%;
 }
 
+/* Normal page background attributes */
 .standard-background {
 	background-image: url('/img/tent-vector-colour.png');
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
 
+/* splash screen background attributes */
 .welcome-background {
 	background-image: url('/img/background-wide.jpg');
 	background-position: top center;
@@ -25,9 +29,10 @@
 	background-size: 100%;
 }
 
+/* diagonal welcome text on splash screen */
 .welcome-text h1 {
-	font-size: 72px;
-	padding-bottom: 110px;
+	font-size: 500%;
+	padding-bottom: 90px;
 	text-shadow: 2px 5px 5px #000000;
 	-webkit-transform: rotate(350deg);
 	-moz-transform: rotate(350deg);
@@ -35,12 +40,30 @@
 	writing-mode: lr-tb;
 }
 
+/* rounded ordered list icons for splash screen */
 .welcome-text ol {
-	font-size: 36px;
+	counter-reset: welcome-item;
+    list-style-type: none;
+	font-size: 400%;
+	font-family: 'Fyra-NumericCircleClosed';	
 	margin-left: 140px;
 	text-shadow: 2px 4px 4px #000000;
+	
+}
+.welcome-text li {
+	display: block;
+}
+.welcome-text li:before { 
+    content: counter(welcome-item) " ";
+    counter-increment: welcome-item 
+}
+.welcome-text ol li span {
+	line-height: 150%;
+	font-size: 60%;
+	font-family: 'Cabin';
 }
 
+/* add logo to the navbar */
 .brand {
   background: url(../img/campfire-logo.png) no-repeat left center;
 }
@@ -52,23 +75,20 @@
 	font-size: 200%;
 }
 
+/* restrict size of tooltip */
 .tooltip-inner {
 	max-width: 500px;
 }
 
+/* adjust padding when having >= 980px real estate */
 @media (min-width: 980px) {
 	.preview {
 		padding-top: 75px;
 	}
 }
 
-/*
-Sticky Footer by Ryan Fait
-http://ryanfait.com/
-*/
-html, body {
-	height: 100%;
-}
+/* uses remaining screen real estate when required */
+/* based on Sticky Footer by Ryan Fait with permission http://ryanfait.com/ */
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -78,4 +98,7 @@ html, body {
 .footer, .push {
 	height: 100px; /* .push must be the same height as .footer */
 }
-/* end sticky footer */
+
+.footer {
+	background-color: #5a5a5a;
+} 

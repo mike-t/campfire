@@ -1,7 +1,16 @@
-/* Import Lobster and Cabin from the Google Font API */
-@import url('//fonts.googleapis.com/css?family=Lobster|Cabin:400,700');
+/* ===================================================
+ * Campfire Font CSS
+ * ===================================================
+ * 
+ * @author:		Mike Walton
+ * @updated:	26/04/2013
+ * @desc:		Load some decent fonts into the browser.
+ * 
+ * =================================================== */
 
+/* =================================================== */
 /* Entypo (Dingbat) Font */
+/* =================================================== */
 @font-face {
     font-family: 'EntypoRegular';
     src: url('/font/Entypo-webfont.eot');
@@ -12,3 +21,131 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* =================================================== */
+/* Fyra (Numbers Dingbat) Font */
+/* =================================================== */
+@font-face {
+	font-family: 'Fyra-NumericCircleClosed';
+	src: url('/font/26C6B6_0_0.eot');
+	src: url('/font/26C6B6_0_0.eot?#iefix') format('embedded-opentype'),
+	url('/font/26C6B6_0_0.woff') format('woff'),
+	url('/font/26C6B6_0_0.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+
+/* =================================================== */
+/* Lobster Font
+/* =================================================== */
+@font-face {
+    font-family: 'Lobster';
+    src: url('/font/Lobster_1.3-webfont.eot');
+    src: url('/font/Lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Lobster_1.3-webfont.woff') format('woff'),
+         url('/font/Lobster_1.3-webfont.ttf') format('truetype'),
+         url('/font/Lobster_1.3-webfont.svg#Lobster13Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* =================================================== */
+/* Cabin Fonts (various) */
+/* =================================================== */
+@font-face {
+    font-family: 'Cabin';
+    src: url('/font/Cabin-Regular-webfont.eot');
+    src: url('/font/Cabin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-Regular-webfont.woff') format('woff'),
+         url('/font/Cabin-Regular-webfont.ttf') format('truetype'),
+         url('/font/Cabin-Regular-webfont.svg#CabinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinItalic';
+    src: url('/font/Cabin-Italic-webfont.eot');
+    src: url('/font/Cabin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-Italic-webfont.woff') format('woff'),
+         url('/font/Cabin-Italic-webfont.ttf') format('truetype'),
+         url('/font/Cabin-Italic-webfont.svg#CabinItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinMedium';
+    src: url('/font/Cabin-Medium-webfont.eot');
+    src: url('/font/Cabin-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-Medium-webfont.woff') format('woff'),
+         url('/font/Cabin-Medium-webfont.ttf') format('truetype'),
+         url('/font/Cabin-Medium-webfont.svg#CabinMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinMediumItalic';
+    src: url('/font/Cabin-MediumItalic-webfont.eot');
+    src: url('/font/Cabin-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-MediumItalic-webfont.woff') format('woff'),
+         url('/font/Cabin-MediumItalic-webfont.ttf') format('truetype'),
+         url('/font/Cabin-MediumItalic-webfont.svg#CabinMediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinSemiBold';
+    src: url('/font/Cabin-SemiBold-webfont.eot');
+    src: url('/font/Cabin-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-SemiBold-webfont.woff') format('woff'),
+         url('/font/Cabin-SemiBold-webfont.ttf') format('truetype'),
+         url('/font/Cabin-SemiBold-webfont.svg#CabinSemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinSemiBoldItalic';
+    src: url('/font/Cabin-SemiBoldItalic-webfont.eot');
+    src: url('/font/Cabin-SemiBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-SemiBoldItalic-webfont.woff') format('woff'),
+         url('/font/Cabin-SemiBoldItalic-webfont.ttf') format('truetype'),
+         url('/font/Cabin-SemiBoldItalic-webfont.svg#CabinSemiBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinBold';
+    src: url('/font/Cabin-Bold-webfont.eot');
+    src: url('/font/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-Bold-webfont.woff') format('woff'),
+         url('/font/Cabin-Bold-webfont.ttf') format('truetype'),
+         url('/font/Cabin-Bold-webfont.svg#CabinBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinBoldItalic';
+    src: url('/font/Cabin-BoldItalic-webfont.eot');
+    src: url('/font/Cabin-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/Cabin-BoldItalic-webfont.woff') format('woff'),
+         url('/font/Cabin-BoldItalic-webfont.ttf') format('truetype'),
+         url('/font/Cabin-BoldItalic-webfont.svg#CabinBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* =================================================== */

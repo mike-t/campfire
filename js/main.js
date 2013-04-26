@@ -193,7 +193,7 @@ function validateForm() {
 		return true;
 	}else{
 		// focus at top of form so user can see errors
-		window.location.hash="top";
+		window.location.hash = '#top';
 		return false;
 	}
 }
