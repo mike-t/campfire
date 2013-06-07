@@ -101,4 +101,11 @@ html, body {
 
 .footer {
 	background-color: #5a5a5a;
-} 
+}
+
+.focus-content {
+	font-size: 115%;
+}
+.activity-block {
+	margin-top: 40px;
+}

@@ -1,8 +1,8 @@
 <?php
 // ====================================
-// getMessages
+// getFriends
 // ====================================
-// Gets 10 latest comments from DB 
+// Gets a list of friends from the db
 // and displays them.
 //
 // Author: Michael Walton
@@ -14,7 +14,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/utils/db.php';
 include $_SERVER['DOCUMENT_ROOT'].'/utils/user.php';
 
 // db query
-$sql = "SELECT m.member_email, m.member_firstname, m.member_lastname, ms.message_content, DATE_FORMAT(ms.message_posted, '%H:%i %W %D %M %Y') AS message_posted
+$sql = "SELECT m.member_email, m.member_firstname, m.member_lastname, ms.message_content, ms.message_posted
 		FROM Messages ms
 		INNER JOIN Members m ON ms.member_id = m.member_id
 		ORDER BY ms.message_posted DESC
@@ -31,7 +31,7 @@ if ($result->rowCount() > 0) {
 	// create the html for each message directly
 	while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 		echo('							<div>');
-		echo('								<p>' . $row['message_posted'] .' - '. $row['member_firstname'] . ' ' . $row['member_lastname'] . '</p>');
+		echo('								<p>15:30 06/06/2013 - '. $row['member_firstname'] . ' ' . $row['member_lastname'] . '</p>');
 		echo('								<p class="focus-content">' . $row['message_content'] . '</p>');
 		echo('								<hr>');
 		echo('							</div>');

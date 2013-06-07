@@ -24,4 +24,7 @@ require $_SERVER['DOCUMENT_ROOT'].'/utils/db.php';
 // include the user session manager
 require $_SERVER['DOCUMENT_ROOT'].'/utils/user.php';
 
+// include the member creation function
+require $_SERVER['DOCUMENT_ROOT'].'/utils/createMember.php';
+
 ?>

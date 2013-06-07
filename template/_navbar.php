@@ -10,7 +10,7 @@
 						<a class="brand" data-toggle="tooltip" title="Share campsites, swap stories and chat around the campfire." href="/">&nbsp; Campfire</a>
 						<div class="nav-collapse collapse" id="main-menu">
 							<ul class="nav" id="main-menu-left">
-								<li><a href="#">Recent Activity</a></li>
+								<li><a href="activity.php">Recent Activity</a></li>
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Bushwalking <b class="caret"></b></a>
 									<ul class="dropdown-menu">

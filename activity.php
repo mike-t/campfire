@@ -18,12 +18,35 @@ require $_SERVER['DOCUMENT_ROOT'].'/template/_header.php';
 					
 					<!-- Recent Activity============================ -->
 					<div class="span10">
-						<h2><span class="ding">:</span> Recent Activity</h2>
-						<p class="lead">What's been happening around your campfire?</p>
+						<div class="row">
+							<div class="span10">
+								<h2><span class="ding">:</span> Recent Activity</h2>
+								<p class="lead">What's been happening around your campfire?</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="span5">	
+								<h3>Messages &nbsp;<small><a href="#">Post a message</a></small></h3>
+<?php
+// get 10 most recent messages
+require $_SERVER['DOCUMENT_ROOT'].'/utils/getMessages.php';
+?>
+							</div>
+							<div class="span5">
+								<div>
+									<h3>Friends</h3>
+									<p class="focus-content">You have no friends connected, <a href="#">add some!</a></p>
+									
+								</div>
+								<div class="activity-block">
+									<h3>Badges</h3>
+									<p class="focus-content">You've earnt the "New Member" badge, well done!</p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- End Recent Activity======================== -->
-
-<?php
+<?php					
 // include the sidebar
 require $_SERVER['DOCUMENT_ROOT'].'/template/_sidebar.php';
 ?>				
