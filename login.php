@@ -43,7 +43,7 @@ if ($_SESSION['user_logged_in']) {
 			// form looks OK, check credentials;
 			if (checkCredentials($_POST['username'], $_POST['password'])) {
 				// login Success! call the login function to set their user session variables
-				echo('<h1>Login successful, loading recent activity...</h1>');
+				showLoggingIn();
 				login($_POST['username']);
 				// redirect user to the activity page
 				header('Location: http://' . $_SERVER['SERVER_NAME'] . '/activity.php');
@@ -76,10 +76,25 @@ function showLoggedIn() {
 					<div class=\"span10\">
 						<h2><span class=\"ding\">6</span> Login</h2>
 						<p class=\"lead\">You are already logged in!</p>
-
-						<form name=\"login-form\" id=\"login-form\" action=\"login.php\" class=\"form-horizontal\" method=\"post\" onsubmit=\"return validateForm();\" >
 					</div>
 					<!-- End Login Message=========================== -->");
+}
+
+// ====================================
+// showLoggingIn - display a message to 
+// tell the user they are logged in and
+// we are loading the activity page
+// ====================================
+function showLoggingIn() {
+	// display the message
+	echo("				<div class=\"row\">
+					
+					<!-- Logging in Message=========================== -->
+					<div class=\"span10\">
+						<h2><span class=\"ding\">6</span> Login</h2>
+						<p class=\"lead\">Login successful, loading recent activity...</p>
+					</div>
+					<!-- End Logging in Message======================= -->");
 }
 
 // ====================================

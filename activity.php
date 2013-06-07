@@ -12,50 +12,18 @@
 // include our custom php libraries and the page header
 require $_SERVER['DOCUMENT_ROOT'].'/utils/libraries.php';
 require $_SERVER['DOCUMENT_ROOT'].'/template/_header.php';
+?>
 
-// check if user is already logged in
-if ($_SESSION['user_logged_in']) {
-	
-	// user is already logged in
-	echo('You are already logged in' . $_SESSION['user_firstname'] . '!');
-	
-} else {
-	
-	// user is not logged in, check if the form needs to be shown or parsed
-	if (!isset($_POST['username']))  {
-	
-		// show login form
-		showLoginForm();
-		
-	}else{
-		
-		// initialise validation variables (generic login error by design)
-		$error = false;
-		$errorDesc = 'Invalid username or password, please try again or <a href="signup.php">sign up!</a>';
-		
-		// form has been submitted, validate it in accordance with model (DB) - higher level validation has been done by javascript
-		if (($_POST['username'] == '') || (strlen($_POST['username']) > 250)) $error = true || $error;
-		if (($_POST['password'] == '') || (strlen($_POST['password']) > 250) || (strlen($_POST['password']) < 8)) $error = true || $error;
-		
-		if ($error) {
-			// there was a validation error, show the form again with the error description
-			showLoginForm($errorDesc); 
-		}else{
-			// form looks OK, check credentials;
-			if (checkCredentials($_POST['username'], $_POST['password'])) {
-				// login Success! call the login function to set their user session variables
-				echo('<h1>Login successful, loading recent activity...</h1>');
-				login($_POST['username']);
-				// redirect user to the activity page
-				header('Location: http://' . $_SERVER['SERVER_NAME'] . '/activity.php');
-			} else {
-				// failed validation, show form with same generic login error
-				showLoginForm($errorDesc);
-			}
-		}
-	}
-}
+				<div class="row">
+					
+					<!-- Recent Activity============================ -->
+					<div class="span10">
+						<h2><span class="ding">:</span> Recent Activity</h2>
+						<p class="lead">What's been happening around your campfire?</p>
+					</div>
+					<!-- End Recent Activity======================== -->
 
+<?php
 // include the sidebar
 require $_SERVER['DOCUMENT_ROOT'].'/template/_sidebar.php';
 ?>				

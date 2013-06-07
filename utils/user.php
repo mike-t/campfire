@@ -11,7 +11,7 @@
 // ====================================
 
 // start / continue the session
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 // check if the user login session exists, if not create it
 if (!isset($_SESSION['user_logged_in'])) $_SESSION['user_logged_in'] = false;

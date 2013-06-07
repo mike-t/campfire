@@ -38,13 +38,13 @@ if (!$_SESSION['user_logged_in']) {
 	echo('								<li><a data-toggle="tooltip" href="login.php" title="I\'m back!"><i class="icon-heart icon-white"></i> Login</a></li>');
 	echo('								<li><a data-toggle="tooltip" href="signup.php" title="Join the Campfire Community!">Join Campfire <i class="icon-share-alt icon-white"></i></a></li>');
 }else{
-echo('								<li class="dropdown">');
-echo("									<a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\"><i class=\"icon-user icon-white\"></i> {$_SESSION['user_firstname']} {$_SESSION['user_firstname']} <b class=\"caret\"></b></a>");
-echo('									<ul class="dropdown-menu">');
-echo('										<li><a target="_blank" href="#"><i class="icon-comment"></i>Activity</a></li>');
-echo('										<li><a target="_blank" href="#"><i class="icon-off"></i> Logout</a></li>');
-echo('									</ul>');
-echo('								</li>');
+	echo('								<li class="dropdown">');
+	echo('									<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user icon-white"></i> ' . $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname'] . '<b class=\"caret\"></b></a>');
+	echo('									<ul class="dropdown-menu">');
+	echo('										<li><a href="activity.php"><i class="icon-comment"></i> Activity</a></li>');
+	echo('										<li><a href="logout.php"><i class="icon-off"></i> Logout</a></li>');
+	echo('									</ul>');
+	echo('								</li>');
 }
 ?>
 							</ul>

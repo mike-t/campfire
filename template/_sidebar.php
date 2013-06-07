@@ -13,7 +13,7 @@
 						  <li class="nav-header">Profile</li>
 						  <li><a href="#">My Profile</a></li>
 						  <li><a href="#">Friends</a></li>
-						  <li><a href="#">Activity</a></li>
+						  <li><a href="activity.php">Activity</a></li>
 						  <li class="divider"></li>
 						</ul>
 					  </div>
