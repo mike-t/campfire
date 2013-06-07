@@ -71,7 +71,7 @@ html, body {
 /* Style for dings font - used for symbols throughout the site */
 .ding {
 	font-family: 'EntypoRegular';
-	vertical-align: center;
+	vertical-align: text-bottom;
 	font-size: 200%;
 }
 
@@ -82,7 +82,7 @@ html, body {
 
 /* adjust padding when having >= 980px real estate */
 @media (min-width: 980px) {
-	.preview {
+	.navbuffer {
 		padding-top: 75px;
 	}
 }
